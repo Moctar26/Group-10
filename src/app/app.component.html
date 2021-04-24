@@ -1,3 +1,40 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <!--le side menu-->
+  <ion-menu menuId="main-menu" contentId="main" >
+  <ion-header>
+    <ion-toolbar color="warning">
+      <ion-title>GROUP 10</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle>
+        <ion-item routerLink="stat">
+          <ion-label class="side">Stat</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+  <ion-router-outlet id="main">
+  </ion-router-outlet>
+
+
+<ion-tabs>
+  <ion-tab-bar color="success">
+    <ion-tab-button tab="category" >
+      <ion-icon name="apps-outline"></ion-icon>
+      <ion-label>Category</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="note" >
+      <ion-icon name="document-text-outline"></ion-icon>
+
+      <ion-label>Note</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>
+
 </ion-app>
+
+

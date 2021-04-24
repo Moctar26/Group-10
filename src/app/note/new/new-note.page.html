@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/note"></ion-back-button>
+    </ion-buttons>
+    <ion-title>New note</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-sm="8" offset-sm="2">
+        <form action="" [formGroup]="form">
+          <ion-item>
+            <ion-label position="floating">Title</ion-label>
+            <ion-input type="text" formControlName="title"></ion-input>
+          </ion-item>
+
+          <ion-item class="ion-margin-top">
+            <!--<ion-label>Content</ion-label>-->
+            <ion-textarea type="text" formControlName="content">Content</ion-textarea>
+          </ion-item>
+
+          <ion-button color="success" class="ion-margin-top" (click)="onSubmit">Save</ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
